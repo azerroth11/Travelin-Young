@@ -256,10 +256,10 @@ nav h2 {
         top: 52.5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #fff;
+        color: yellow;
         font-size: 7rem;
-        -webkit-text-stroke: 2.5px black;
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     }
 
     .hero p {
@@ -310,11 +310,5 @@ nav h2 {
 
     .playlists p {
         display: block;
-    }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    .hero h1 {
-        font-weight: 500;
     }
 }
