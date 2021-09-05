@@ -155,8 +155,6 @@ nav h2 {
 #mapdiv {
     width: 100vw;
     height: 100vh;
-    margin-left: 0;
-    transform: scale(7);
 }
 
 .map h1 {
@@ -302,12 +300,12 @@ nav h2 {
         margin-bottom: 0;
     }
 
-    #mapdiv {
+    /* #mapdiv {
         width: 100vw;
         height: 100vh;
         padding-top: 8vh;
         transform: scale(4);
-    }
+    } */
 
     .about {
         position: relative;
