@@ -176,12 +176,12 @@ nav h2 {
     0% {
         visibility: visible;
         top: 53%;
-        left: 28%;
+        left: 31%;
     }
 
     100% {
         top: 37%;
-        left: 77%;
+        left: 78%;
     }
 }
 
