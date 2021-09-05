@@ -26,6 +26,8 @@ body {
 
 section {
     scroll-snap-align: start;
+    width: 100vw;
+    min-height: 95vh;
 }
 
 /* Commons */
@@ -138,6 +140,49 @@ nav h2 {
 
 .hero p {
     margin-top: 2rem;
+}
+
+/* Map */
+.map {
+    background: no-repeat url('./img/full-map.png');
+    background-size: center contain;
+    min-height: 95vh;
+    position: relative;
+}
+
+.map .chicago {
+    position: absolute;
+    top: 53%;
+    left: 28%;
+    display: grid;
+    place-items: center;
+}
+
+.map .copenhagen {
+    position: absolute;
+    top: 37%;
+    left: 77%;
+    display: grid;
+    place-items: center;
+}
+
+.map .plane {
+    visibility: hidden;
+    position: absolute;
+    animation: plane 3.5s ease-in-out;
+}
+
+@keyframes plane {
+    0% {
+        visibility: visible;
+        top: 53%;
+        left: 28%;
+    }
+
+    100% {
+        top: 37%;
+        left: 77%;
+    }
 }
 
 /* About */
