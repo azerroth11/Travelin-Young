@@ -125,6 +125,10 @@ nav h2 {
 }
 
 /* Hero */
+.hero {
+    margin-bottom: 5vh;
+}
+
 .hero video {
     padding: 0;
     height: 40vh;
@@ -143,6 +147,26 @@ nav h2 {
 }
 
 /* Map */
+.map {
+    overflow: hidden;
+    position: relative;
+}
+
+#mapdiv {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    transform: scale(7);
+}
+
+.map h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px #fff;
+}
 
 /* About */
 .about {
@@ -179,6 +203,10 @@ nav h2 {
     padding: 0.5rem;
     color: var(--main);
     font-size: 3rem;
+}
+
+.about .dr {
+    max-width: 150px;
 }
 
 .about a {
@@ -268,6 +296,17 @@ nav h2 {
 
     .hero p {
         display: none;
+    }
+
+    .hero {
+        margin-bottom: 0;
+    }
+
+    #mapdiv {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 8vh;
+        transform: scale(4);
     }
 
     .about {

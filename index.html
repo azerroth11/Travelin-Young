@@ -10,7 +10,18 @@
         />
         <link rel="stylesheet" href="style.css" />
         <title>Travelin' Young</title>
-        <script src="script.js" defer></script>
+        <script
+            src="https://www.amcharts.com/lib/3/ammap.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="https://www.amcharts.com/lib/3/themes/dark.js"
+            type="text/javascript"
+        ></script>
     </head>
 
     <body>
@@ -38,37 +49,32 @@
         </section>
 
         <section class="map">
-            <script
-                src="https://www.amcharts.com/lib/3/ammap.js"
-                type="text/javascript"
-            ></script>
-            <script
-                src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js"
-                type="text/javascript"
-            ></script>
-            <script
-                src="https://www.amcharts.com/lib/3/themes/dark.js"
-                type="text/javascript"
-            ></script>
-            <div id="mapdiv" style="width: 100vw; height: 100vh"></div>
+            <div id="mapdiv"></div>
             <script type="text/javascript">
                 var map = AmCharts.makeChart('mapdiv', {
                     type: 'map',
                     theme: 'dark',
                     projection: 'mercator',
-                    panEventsEnabled: true,
+                    panEventsEnabled: false,
                     backgroundColor: '#fff',
+                    dragMap: false,
+                    zoomOnDoubleClick: false,
                     backgroundAlpha: 0,
-                    zoomControl: {
-                        zoomControlEnabled: true,
+                    autoTransform: true,
+                    balloon: {
+                        adjustBorderColor: true,
+                        color: '#000000',
+                        cornerRadius: 2,
+                        fillColor: '#FFFFFF',
+                        fontSize: 4,
+                        borderThickness: 0.5,
+                        horizontalPadding: 4,
+                        verticalPadding: 1,
                     },
-                    titles: [
-                        {
-                            text: 'Countries we have visited',
-                            size: 48,
-                            color: '#4095bf',
-                        },
-                    ],
+                    zoomControl: {
+                        zoomControlEnabled: false,
+                        homeButtonEnabled: false,
+                    },
                     dataProvider: {
                         map: 'worldHigh',
                         getAreasFromMap: true,
@@ -84,16 +90,19 @@
                         ],
                     },
                     areasSettings: {
-                        autoZoom: false,
+                        zoom: false,
+                        selectable: false,
                         color: '#B4B4B7',
                         colorSolid: '#4095bf',
                         selectedColor: '#4095bf',
                         outlineColor: '#666666',
+                        outlineThickness: 0.2,
                         rollOverColor: '#DCE7F7',
                         rollOverOutlineColor: '#000000',
                     },
                 })
             </script>
+            <h1>Our recent trips</h1>
         </section>
 
         <section class="about">
@@ -104,6 +113,10 @@
                 <h2 class="number">20502</h2>
                 <h3>YOUTUBE VIEWERS</h3>
                 <a href="#">SUBSCRIBE TO OUR CHANNEL</a>
+            </div>
+            <div class="dr">
+                <img src="./img/dr.png" alt="" />
+                <p>Watch us on DR.tv</p>
             </div>
             <div class="txt">
                 <p>
