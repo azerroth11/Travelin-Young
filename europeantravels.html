@@ -8,18 +8,17 @@
         <script src="//cdn.amcharts.com/lib/4/core.js"></script>
         <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
         <!-- <script src="//cdn.amcharts.com/lib/4/geodata/worldUltra.js"></script> -->
-        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
         <script src="./denmarkHigh.js"></script>
-        <title>Our European travels</title>
+        <title>Denmark</title>
     </head>
 
     <body>
-        <section>
+        <section class="map">
+            <h1>Follow us as we explore Denmark !</h1>
             <div id="chartdiv"></div>
             <script>
                 let chart = am4core.createFromConfig(
                     {
-                        // ... map config
                         geodata: am4geodata_denmarkHigh,
                         projection: 'Mercator',
                         series: [
@@ -177,6 +176,32 @@
                     'chartdiv',
                     am4maps.MapChart
                 )
+                let legend = new am4maps.Legend()
+                legend.parent = chart.chartContainer
+                legend.background.fill = am4core.color('#000')
+                legend.background.fillOpacity = 0.05
+                legend.width = 200
+                legend.align = 'right'
+                legend.padding(10, 15, 10, 15)
+                legend.data = [
+                    {
+                        name: 'Danish Castles',
+                        fill: '#4095bf',
+                    },
+                    {
+                        name: 'Main Cities',
+                        fill: '#B27799',
+                    },
+                    {
+                        name: 'Something else',
+                        fill: '#000',
+                    },
+                ]
+                legend.itemContainers.template.clickable = true
+                legend.itemContainers.template.focusable = true
+
+                var legendTitle = legend.createChild(am4core.Label)
+                legendTitle.text = 'Colors:'
             </script>
         </section>
     </body>
