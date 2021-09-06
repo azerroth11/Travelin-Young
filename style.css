@@ -243,14 +243,19 @@ nav h2 {
 }
 
 /* Travels Playlists Page */
+.map {
+    display: grid;
+    place-items: center;
+}
+
 .map h1 {
     text-align: center;
     font-size: 3rem;
 }
 
 #chartdiv {
-    height: 100vh;
-    width: 50%;
+    height: 90vh;
+    /* width: 50%; */
     min-width: 400px;
 }
 

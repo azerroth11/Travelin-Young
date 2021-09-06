@@ -62,6 +62,7 @@
                                         longitude: 12.5683,
                                         title: 'Copenhagen',
                                         color: '#B27799',
+                                        url: 'https://youtu.be/X7ICt_ROVR4',
                                     },
                                     {
                                         latitude: 56.1629,
@@ -176,6 +177,7 @@
                     'chartdiv',
                     am4maps.MapChart
                 )
+                // Legend
                 let legend = new am4maps.Legend()
                 legend.parent = chart.chartContainer
                 legend.background.fill = am4core.color('#000')
@@ -197,11 +199,16 @@
                         fill: '#000',
                     },
                 ]
-                legend.itemContainers.template.clickable = true
-                legend.itemContainers.template.focusable = true
-
-                var legendTitle = legend.createChild(am4core.Label)
+                legend.itemContainers.template.clickable = false
+                legend.itemContainers.template.focusable = false
+                let legendTitle = legend.createChild(am4core.Label)
                 legendTitle.text = 'Colors:'
+                // Disabled zoom
+                chart.seriesContainer.draggable = false
+                chart.seriesContainer.resizable = false
+                chart.maxZoomLevel = 1
+                chart.seriesContainer.events.disableType('doublehit')
+                chart.chartContainer.background.events.disableType('doublehit')
             </script>
         </section>
     </body>
