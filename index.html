@@ -9,7 +9,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
         <link rel="stylesheet" href="style.css" />
-        <!-- <script src="script.js" defer></script> -->
+        <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="./denmarkHigh.js"></script>
         <title>Travelin' Young</title>
     </head>
 
@@ -71,7 +73,209 @@
             </div>
         </section>
 
-        <section class="playlists">
+        <section class="map">
+            <h1>Follow us as we travel !</h1>
+            <!-- togglable box between denmark and world-->
+            <div id="chartdiv"></div>
+            <script>
+                let chart = am4core.createFromConfig(
+                    {
+                        geodata: am4geodata_denmarkHigh,
+                        projection: 'Mercator',
+                        series: [
+                            {
+                                type: 'MapPolygonSeries',
+                                useGeodata: true,
+                                mapPolygons: {
+                                    tooltipText: '{name}',
+                                    fill: '#93c388',
+                                    states: {
+                                        hover: {
+                                            properties: {
+                                                fill: '#367B25',
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            {
+                                type: 'MapImageSeries',
+                                mapImages: {
+                                    children: [
+                                        {
+                                            type: 'Circle',
+                                            radius: 15,
+                                            stroke: '#B27799',
+                                            strokeWidth: 4,
+                                            nonScaling: true,
+                                            tooltipText: '{title}',
+                                        },
+                                    ],
+                                    propertyFields: {
+                                        latitude: 'latitude',
+                                        longitude: 'longitude',
+                                        fill: 'color',
+                                    },
+                                },
+                                data: [
+                                    {
+                                        latitude: 55.6761,
+                                        longitude: 12.5683,
+                                        title: 'Copenhagen',
+                                        color: '#B27799',
+                                        url: 'https://youtu.be/X7ICt_ROVR4',
+                                    },
+                                    {
+                                        latitude: 56.1629,
+                                        longitude: 10.2039,
+                                        title: 'Aarhus',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.6122,
+                                        longitude: 9.7467,
+                                        title: 'Egeskov',
+                                    },
+                                    {
+                                        latitude: 55.496,
+                                        longitude: 9.4731,
+                                        title: 'Kolding',
+                                    },
+                                    {
+                                        latitude: 54.8589,
+                                        longitude: 10.3875,
+                                        title: 'Ærø',
+                                    },
+                                    {
+                                        latitude: 56.0308,
+                                        longitude: 12.5921,
+                                        title: 'Helsingør',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.1868,
+                                        longitude: 11.7098,
+                                        title: 'Gavnø',
+                                    },
+                                    {
+                                        latitude: 55.4038,
+                                        longitude: 10.4024,
+                                        title: 'Odense',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.1042,
+                                        longitude: 10.2287,
+                                        title: 'Faaborg',
+                                    },
+                                    {
+                                        latitude: 55.7284,
+                                        longitude: 9.1124,
+                                        title: 'Bilund',
+                                    },
+                                    {
+                                        latitude: 55.8147,
+                                        longitude: 10.5886,
+                                        title: 'Samsø',
+                                    },
+                                    {
+                                        latitude: 54.9841,
+                                        longitude: 12.5437,
+                                        title: 'Møns Klint',
+                                    },
+                                    {
+                                        latitude: 54.9138,
+                                        longitude: 9.7922,
+                                        title: 'Sønderborg',
+                                    },
+                                    {
+                                        latitude: 55.8565,
+                                        longitude: 11.9746,
+                                        title: 'Jægerspris Slot',
+                                        color: '#4095bf',
+                                    },
+                                    {
+                                        latitude: 54.7275,
+                                        longitude: 11.4649,
+                                        title: 'Lolland',
+                                    },
+                                    {
+                                        latitude: 55.1612,
+                                        longitude: 11.154,
+                                        title: 'Omø',
+                                    },
+                                    {
+                                        latitude: 56.4606,
+                                        longitude: 10.0365,
+                                        title: 'Randers',
+                                    },
+                                    {
+                                        latitude: 57.0488,
+                                        longitude: 9.9217,
+                                        title: 'Aalborg',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 57.725,
+                                        longitude: 10.5792,
+                                        title: 'Skagen',
+                                    },
+                                    {
+                                        latitude: 56.6396,
+                                        longitude: 8.7826,
+                                        title: 'Spøttrup Borg',
+                                        color: '#4095bf',
+                                    },
+                                    {
+                                        latitude: 56.4569,
+                                        longitude: 9.1662,
+                                        title: 'Mønsted Kalkgruber',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    'chartdiv',
+                    am4maps.MapChart
+                )
+                // Legend
+                let legend = new am4maps.Legend()
+                legend.parent = chart.chartContainer
+                legend.background.fill = am4core.color('#000')
+                legend.background.fillOpacity = 0.05
+                legend.width = 200
+                legend.align = 'bottom'
+                legend.padding(10, 15, 10, 15)
+                legend.data = [
+                    {
+                        name: 'Danish Castles',
+                        fill: '#4095bf',
+                    },
+                    {
+                        name: 'Main Cities',
+                        fill: '#B27799',
+                    },
+                    {
+                        name: 'Something else',
+                        fill: '#000',
+                    },
+                ]
+                legend.itemContainers.template.clickable = false
+                legend.itemContainers.template.focusable = false
+                let legendTitle = legend.createChild(am4core.Label)
+                legendTitle.text = 'Colors:'
+                // Disabled zoom
+                chart.seriesContainer.draggable = false
+                chart.seriesContainer.resizable = false
+                chart.maxZoomLevel = 1
+                chart.seriesContainer.events.disableType('doublehit')
+                chart.chartContainer.background.events.disableType('doublehit')
+                // Enabled scroll through
+                chart.chartContainer.wheelable = false
+            </script>
+        </section>
+
+        <!-- <section class="playlists">
             <h1>Popular playlists</h1>
             <div class="castles play">
                 <img src="./img/castles-thumbnail.jpg" alt="" />
@@ -80,7 +284,7 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
             <div class="moving play">
                 <img src="./img/moving.thumbnail.jpg" alt="" />
@@ -89,7 +293,7 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
             <div class="cooking play">
                 <img src="./img/cooking.thumbnail.jpg" alt="" />
@@ -98,7 +302,7 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
             <div class="cooking play">
                 <img src="./img/cooking.thumbnail.jpg" alt="" />
@@ -107,7 +311,7 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
             <div class="castles play">
                 <img src="./img/castles-thumbnail.jpg" alt="" />
@@ -116,7 +320,7 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
             <div class="cooking play">
                 <img src="./img/cooking.thumbnail.jpg" alt="" />
@@ -125,9 +329,9 @@
                     At, obcaecati. Nesciunt accusamus, debitis quam quia,
                     dolorum aut ut dolore vel facilis.
                 </p>
-                <a href="./europeantravels.html">READ MORE</a>
+                <a href="#">READ MORE</a>
             </div>
-        </section>
+        </section> -->
 
         <section class="channel">
             <div class="channel-content">

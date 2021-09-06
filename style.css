@@ -206,13 +206,18 @@ nav h2 {
     margin-top: 2rem;
 }
 
+/* Map */
+.map {
+    position: absolute;
+    top: -999999vh;
+}
+
 /* Playlists */
 .playlists {
     display: grid;
     place-items: center;
     gap: 2rem;
-    background-color: rgba(211, 211, 211, 0.5);
-    border-radius: 25px;
+    /* background-color: hsla(200, 50%, 50%, 0.2); */
 }
 
 .playlists img {
@@ -246,6 +251,8 @@ nav h2 {
 .map {
     display: grid;
     place-items: center;
+    background-color: hsl(0, 0%, 90%);
+    max-width: none;
 }
 
 .map h1 {
@@ -255,8 +262,7 @@ nav h2 {
 
 #chartdiv {
     height: 90vh;
-    /* width: 50%; */
-    min-width: 400px;
+    background-color: hsl(0, 0%, 90%);
 }
 
 @media screen and (min-width: 768px) {
@@ -334,6 +340,12 @@ nav h2 {
         max-width: 125px;
     }
 
+    .map {
+        position: relative;
+        display: visible;
+        top: 0;
+    }
+
     .playlists {
         padding: 1rem;
         position: relative;
@@ -370,12 +382,21 @@ nav h2 {
 
     .playlists h1 {
         position: absolute;
-        top: -55%;
+        top: -48%;
         left: 0;
     }
 
     .channel {
+        padding-top: 5vh;
+        max-width: none;
         display: flex;
         flex-direction: column;
+        margin-bottom: 0;
+        place-items: center;
+    }
+
+    .channel-content {
+        max-width: 750px;
+        padding-bottom: 3rem;
     }
 }
