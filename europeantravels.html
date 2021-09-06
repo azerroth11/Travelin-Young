@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
+        <!-- <script src="//cdn.amcharts.com/lib/4/geodata/worldUltra.js"></script> -->
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="./denmarkHigh.js"></script>
+        <title>Our European travels</title>
+    </head>
+
+    <body>
+        <section>
+            <div id="chartdiv"></div>
+            <script>
+                let chart = am4core.createFromConfig(
+                    {
+                        // ... map config
+                        geodata: am4geodata_denmarkHigh,
+                        projection: 'Mercator',
+                        series: [
+                            {
+                                type: 'MapPolygonSeries',
+                                useGeodata: true,
+                                mapPolygons: {
+                                    tooltipText: '{name}',
+                                    fill: '#93c388',
+                                    states: {
+                                        hover: {
+                                            properties: {
+                                                fill: '#367B25',
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            {
+                                type: 'MapImageSeries',
+                                mapImages: {
+                                    children: [
+                                        {
+                                            type: 'Circle',
+                                            radius: 15,
+                                            stroke: '#B27799',
+                                            strokeWidth: 4,
+                                            nonScaling: true,
+                                            tooltipText: '{title}',
+                                        },
+                                    ],
+                                    propertyFields: {
+                                        latitude: 'latitude',
+                                        longitude: 'longitude',
+                                        fill: 'color',
+                                    },
+                                },
+                                data: [
+                                    {
+                                        latitude: 55.6761,
+                                        longitude: 12.5683,
+                                        title: 'Copenhagen',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 56.1629,
+                                        longitude: 10.2039,
+                                        title: 'Aarhus',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.6122,
+                                        longitude: 9.7467,
+                                        title: 'Egeskov',
+                                    },
+                                    {
+                                        latitude: 55.496,
+                                        longitude: 9.4731,
+                                        title: 'Kolding',
+                                    },
+                                    {
+                                        latitude: 54.8589,
+                                        longitude: 10.3875,
+                                        title: 'Ærø',
+                                    },
+                                    {
+                                        latitude: 56.0308,
+                                        longitude: 12.5921,
+                                        title: 'Helsingør',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.1868,
+                                        longitude: 11.7098,
+                                        title: 'Gavnø',
+                                    },
+                                    {
+                                        latitude: 55.4038,
+                                        longitude: 10.4024,
+                                        title: 'Odense',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 55.1042,
+                                        longitude: 10.2287,
+                                        title: 'Faaborg',
+                                    },
+                                    {
+                                        latitude: 55.7284,
+                                        longitude: 9.1124,
+                                        title: 'Bilund',
+                                    },
+                                    {
+                                        latitude: 55.8147,
+                                        longitude: 10.5886,
+                                        title: 'Samsø',
+                                    },
+                                    {
+                                        latitude: 54.9841,
+                                        longitude: 12.5437,
+                                        title: 'Møns Klint',
+                                    },
+                                    {
+                                        latitude: 54.9138,
+                                        longitude: 9.7922,
+                                        title: 'Sønderborg',
+                                    },
+                                    {
+                                        latitude: 55.8565,
+                                        longitude: 11.9746,
+                                        title: 'Jægerspris Slot',
+                                        color: '#4095bf',
+                                    },
+                                    {
+                                        latitude: 54.7275,
+                                        longitude: 11.4649,
+                                        title: 'Lolland',
+                                    },
+                                    {
+                                        latitude: 55.1612,
+                                        longitude: 11.154,
+                                        title: 'Omø',
+                                    },
+                                    {
+                                        latitude: 56.4606,
+                                        longitude: 10.0365,
+                                        title: 'Randers',
+                                    },
+                                    {
+                                        latitude: 57.0488,
+                                        longitude: 9.9217,
+                                        title: 'Aalborg',
+                                        color: '#B27799',
+                                    },
+                                    {
+                                        latitude: 57.725,
+                                        longitude: 10.5792,
+                                        title: 'Skagen',
+                                    },
+                                    {
+                                        latitude: 56.6396,
+                                        longitude: 8.7826,
+                                        title: 'Spøttrup Borg',
+                                        color: '#4095bf',
+                                    },
+                                    {
+                                        latitude: 56.4569,
+                                        longitude: 9.1662,
+                                        title: 'Mønsted Kalkgruber',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    'chartdiv',
+                    am4maps.MapChart
+                )
+            </script>
+        </section>
+    </body>
+</html>
