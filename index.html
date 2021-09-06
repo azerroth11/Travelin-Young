@@ -12,6 +12,8 @@
         <script src="//cdn.amcharts.com/lib/4/core.js"></script>
         <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
         <script src="./denmarkHigh.js"></script>
+        <script src="./europeUltra.js"></script>
+        <script src="./script.js" defer></script>
         <title>Travelin' Young</title>
     </head>
 
@@ -73,16 +75,17 @@
             </div>
         </section>
 
-        <section class="map">
+        <section class="map-denmark">
             <h1>
                 Follow us as we travel
-                <span class="mapDK">in Denmark</span> /
-                <span>in the world</span>
+                <span class="denmark-selectable selected">in Denmark</span> /
+                <span class="europe-selectable">in Europe</span>
             </h1>
             <!-- togglable box between denmark and world-->
-            <div id="chartdiv"></div>
+            <div id="mapDK"></div>
+            <div id="mapEurope"></div>
             <script>
-                let map = am4core.create('chartdiv', am4maps.MapChart)
+                let map = am4core.create('mapDK', am4maps.MapChart)
                 map.geodata = am4geodata_denmarkHigh
                 map.projection = new am4maps.projections.Mercator()
                 let polygonSeries = new am4maps.MapPolygonSeries()

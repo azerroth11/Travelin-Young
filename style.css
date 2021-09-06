@@ -100,6 +100,20 @@ i {
     border-radius: 0.25em;
 }
 
+/* Javascript */
+.visible {
+    display: visible;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    text-decoration: underline;
+    color: limegreen;
+}
+
 /* Navigation */
 nav {
     position: fixed;
@@ -207,7 +221,7 @@ nav h2 {
 }
 
 /* Map */
-.map {
+.map-denmark {
     position: absolute;
     top: -999999vh;
 }
@@ -248,21 +262,27 @@ nav h2 {
 }
 
 /* Travels Playlists Page */
-.map {
+.map-denmark {
     display: grid;
     place-items: center;
     background-color: hsl(0, 0%, 90%);
     max-width: none;
 }
 
-.map h1 {
+.map-denmark h1 {
     text-align: center;
     font-size: 3rem;
 }
 
-#chartdiv {
+#mapDK {
     height: 90vh;
+    width: 100%;
     background-color: hsl(0, 0%, 90%);
+}
+
+.denmark-selectable,
+.europe-selectable {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -340,7 +360,7 @@ nav h2 {
         max-width: 125px;
     }
 
-    .map {
+    .map-denmark {
         position: relative;
         display: visible;
         top: 0;
