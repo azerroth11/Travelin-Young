@@ -18,7 +18,6 @@ html {
 body {
     font-family: 'Ovo', serif;
     font-size: 18px;
-    max-width: 1400px;
     display: grid;
     place-items: center;
     overflow-x: hidden;
@@ -125,17 +124,12 @@ nav h2 {
 }
 
 /* Hero */
-.hero {
-    margin-bottom: 5vh;
-}
-
 .hero video {
     padding: 0;
     height: 40vh;
     width: 100vw;
     object-fit: cover;
     max-height: 60vh;
-    margin-bottom: 3rem;
 }
 
 .hero h1 {
@@ -146,31 +140,9 @@ nav h2 {
     margin-top: 2rem;
 }
 
-/* Map */
-.map {
-    overflow: hidden;
-    position: relative;
-}
-
-#mapdiv {
-    width: 100vw;
-    height: 100vh;
-}
-
-.map h1 {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 4rem;
-    text-shadow: 2px 2px 5px #fff;
-}
-
 /* About */
 .about {
-    margin-top: 3rem;
     display: grid;
-    place-items: center;
     grid-template-areas:
         'title'
         'image'
@@ -188,13 +160,20 @@ nav h2 {
 
 .about .txt {
     grid-area: txt;
+    place-self: center;
+}
+
+.about .stats {
+    display: grid;
+    place-items: end center;
+    gap: 2rem;
+    grid-area: stats;
+    margin: 5rem 0;
 }
 
 .about .ytstats {
     display: grid;
-    grid-area: stats;
     place-items: center;
-    margin: 1.5rem 0;
 }
 
 .about .ytstats .number {
@@ -204,11 +183,21 @@ nav h2 {
 }
 
 .about .dr {
-    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .dr img {
+    max-width: 100px;
+    cursor: pointer;
 }
 
 .about a {
     padding: 0.5rem 1rem;
+    width: 300px;
+    text-align: center;
     border-radius: 10px;
     background-color: var(--main);
     color: #fff;
@@ -220,12 +209,11 @@ nav h2 {
 /* Playlists */
 .playlists {
     display: grid;
+    place-items: center;
     gap: 2rem;
-    padding: 2rem;
-}
-
-.playlists > * {
-    margin: 0 auto;
+    margin-top: 1.5rem;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-radius: 25px;
 }
 
 .playlists img {
@@ -260,18 +248,23 @@ nav h2 {
         padding: 0.8rem 2.5rem;
     }
 
-    .playlists {
-        margin-top: 3rem;
-    }
-
     i {
         font-size: 30px;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    section {
+        margin-bottom: 5vh;
+        max-width: 1400px;
+    }
+
     p {
         font-size: 1.4rem;
+    }
+
+    .hero {
+        place-self: start;
     }
 
     .hero video {
@@ -296,30 +289,15 @@ nav h2 {
         display: none;
     }
 
-    .hero {
-        margin-bottom: 0;
-    }
-
-    /* #mapdiv {
-        width: 100vw;
-        height: 100vh;
-        padding-top: 8vh;
-        transform: scale(4);
-    } */
-
     .about {
         position: relative;
         display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'title title'
             'image txt'
-            'stats txt';
-    }
-
-    .about h1 {
-        position: absolute;
-        top: 100%;
-        left: 1%;
+            'stats stats';
+        padding: 10vh 0;
     }
 
     .about img {
@@ -331,16 +309,25 @@ nav h2 {
         margin-top: 2rem;
     }
 
-    .playlists {
-        padding-top: 5rem;
-        margin-bottom: 8rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
+    .about .stats {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .playlists > * {
-        display: flex;
+    .about .dr img {
+        max-width: 125px;
+    }
+
+    .playlists {
+        padding-top: 5rem;
+        position: relative;
+        display: grid;
+        place-items: start center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .playlists p {
+        display: block;
+        max-width: 400px;
     }
 
     .playlists h1 {
@@ -349,7 +336,8 @@ nav h2 {
         left: 0;
     }
 
-    .playlists p {
-        display: block;
+    .channel {
+        display: flex;
+        flex-direction: column;
     }
 }
