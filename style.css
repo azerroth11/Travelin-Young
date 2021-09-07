@@ -111,7 +111,7 @@ i {
 
 .selected {
     text-decoration: underline;
-    color: limegreen;
+    color: #74b266;
 }
 
 /* Navigation */
@@ -231,7 +231,7 @@ nav h2 {
     display: grid;
     place-items: center;
     gap: 2rem;
-    /* background-color: hsla(200, 50%, 50%, 0.2); */
+    background-color: hsla(200, 50%, 50%, 0.2);
 }
 
 .playlists img {

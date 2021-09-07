@@ -103,10 +103,9 @@
                 let imageSeriesTemplate = imageSeries.mapImages.template
                 let circle = imageSeriesTemplate.createChild(am4core.Circle)
                 circle.radius = 12
-                circle.fill = am4core.color('#B27799')
+                circle.fill = am4core.color('#db7575')
                 circle.stroke = am4core.color('#FFFFFF')
                 circle.strokeWidth = 2
-                circle.nonScaling = true
                 circle.tooltipHTML = '{title}'
                 imageSeriesTemplate.propertyFields.latitude = 'latitude'
                 imageSeriesTemplate.propertyFields.longitude = 'longitude'
@@ -114,7 +113,7 @@
                     {
                         latitude: 55.6761,
                         longitude: 12.5683,
-                        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YWVHfn_zIS8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                        title: '<h2>It can have a title</h2>  <iframe width="560" height="315" src="https://www.youtube.com/embed/YWVHfn_zIS8?controls=0" frameborder="0"; encrypted-media;></iframe><p>It can have a description</p>',
                     },
                     {
                         latitude: 56.1629,
