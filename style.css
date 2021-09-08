@@ -221,7 +221,7 @@ nav h2 {
 }
 
 /* Map */
-.map-denmark {
+.map {
     position: absolute;
     top: -999999vh;
 }
@@ -262,26 +262,28 @@ nav h2 {
 }
 
 /* Travels Playlists Page */
-.map-denmark {
+.map {
     display: grid;
     place-items: center;
     background-color: hsl(0, 0%, 90%);
     max-width: none;
 }
 
-.map-denmark h1 {
+.map h1 {
     text-align: center;
     font-size: 3rem;
 }
 
-#mapDK {
+#mapDK,
+#mapEU,
+#mapCPH {
     height: 90vh;
     width: 100%;
-    background-color: hsl(0, 0%, 90%);
 }
 
 .denmark-selectable,
-.europe-selectable {
+.europe-selectable,
+.copenhagen-selectable {
     cursor: pointer;
 }
 
@@ -360,7 +362,7 @@ nav h2 {
         max-width: 125px;
     }
 
-    .map-denmark {
+    .map {
         position: relative;
         display: visible;
         top: 0;
