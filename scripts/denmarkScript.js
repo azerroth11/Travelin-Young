@@ -20,19 +20,22 @@ circle.fill = am4core.color('#db7575')
 circle.stroke = am4core.color('#FFFFFF')
 circle.strokeWidth = 2
 circle.tooltipHTML = '{title}'
-// Tooltip links
+// Data
 imageSeriesTemplate.propertyFields.latitude = 'latitude'
 imageSeriesTemplate.propertyFields.longitude = 'longitude'
+imageSeriesTemplate.propertyFields.name = 'name'
 imageSeries.data = [
     {
         latitude: 55.6761,
         longitude: 12.5683,
         title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YWVHfn_zIS8?controls=0" frameborder="0"; encrypted-media;></iframe>',
+        name: 'Copenhagen',
     },
     {
         latitude: 56.1629,
         longitude: 10.2039,
         title: 'Aarhus',
+        name: 'Aarhus',
     },
     {
         latitude: 55.6122,
@@ -63,6 +66,7 @@ imageSeries.data = [
         latitude: 55.4038,
         longitude: 10.4024,
         title: 'Odense',
+        name: 'Odense',
     },
     {
         latitude: 55.1042,
@@ -142,5 +146,14 @@ map.seriesContainer.resizable = false
 map.maxZoomLevel = 1
 map.seriesContainer.events.disableType('doublehit')
 map.chartContainer.background.events.disableType('doublehit')
+// Set Zoom
+// TBD
+// Main cities label
+var label = imageSeriesTemplate.createChild(am4core.Label)
+label.text = '{name}'
+label.fontSize = '1.8rem'
+label.fontWeight = 'bolder'
+label.horizontalCenter = 'middle'
+label.padding(12, 0, 0, 0)
 // Enabled scroll through
 map.chartContainer.wheelable = false
