@@ -196,7 +196,8 @@ nav h2 {
     font-size: 3rem;
 }
 
-.about .dr {
+.about .dr,
+.about .tv2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,6 +207,10 @@ nav h2 {
 .about .dr img {
     max-width: 100px;
     cursor: pointer;
+}
+
+.about .tv2 img {
+    max-width: 200px;
 }
 
 .about a {
