@@ -4635,3 +4635,236 @@ am4internal_webpackJsonp(
     },
     ['e3Q5']
 )
+
+let map = am4core.create('mapDK', am4maps.MapChart)
+map.geodata = am4geodata_denmarkHigh
+map.projection = new am4maps.projections.Mercator()
+let polygonSeries = new am4maps.MapPolygonSeries()
+polygonSeries.useGeodata = true
+map.series.push(polygonSeries)
+// Populate series data
+let polygonTemplate = polygonSeries.mapPolygons.template
+polygonTemplate.tooltipText = '{name}'
+polygonTemplate.fill = am4core.color('#74B266')
+// Hover state
+let hs = polygonTemplate.states.create('hover')
+hs.properties.fill = am4core.color('#367B25')
+// Tooltip
+let imageSeries = map.series.push(new am4maps.MapImageSeries())
+let imageSeriesTemplate = imageSeries.mapImages.template
+let circle = imageSeriesTemplate.createChild(am4core.Circle)
+circle.radius = 12
+circle.fill = am4core.color('#db7575')
+circle.stroke = am4core.color('#FFFFFF')
+circle.strokeWidth = 2
+circle.tooltipHTML = '{title}'
+// Tooltip stays on hover
+imageSeries.tooltip.label.interactionsEnabled = true
+imageSeries.tooltip.keepTargetHover = true
+// Data
+imageSeriesTemplate.propertyFields.latitude = 'latitude'
+imageSeriesTemplate.propertyFields.longitude = 'longitude'
+imageSeriesTemplate.propertyFields.name = 'name'
+imageSeries.data = [
+    {
+        latitude: 55.6761,
+        longitude: 12.5683,
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YWVHfn_zIS8?controls=0" frameborder="0"; controls=0;></iframe>',
+        name: 'Copenhagen',
+    },
+    {
+        latitude: 56.1629,
+        longitude: 10.2039,
+        title: 'https://www.youtube.com/embed/watch?v=hmqbUfgoWfw',
+        name: 'Aarhus',
+    },
+    {
+        latitude: 55.6122,
+        longitude: 9.7467,
+        title: 'https://www.youtube.com/watch?v=hmqbUfgoWfw',
+        // name: 'Egeskov',
+    },
+    {
+        latitude: 55.496,
+        longitude: 9.4731,
+        title: 'https://www.youtube.com/watch?v=hU6IG5drWmM',
+        // name: 'Kolding',
+    },
+    {
+        latitude: 54.8589,
+        longitude: 10.3875,
+        title: 'https://www.youtube.com/watch?v=LUB01WCl2z4',
+        // name: 'Ærø',
+    },
+    {
+        latitude: 56.0308,
+        longitude: 12.5921,
+        title: 'https://www.youtube.com/watch?v=BCHgdOwpOzU',
+        // name: 'Helsingør',
+    },
+    {
+        latitude: 55.1868,
+        longitude: 11.7098,
+        title: 'https://www.youtube.com/watch?v=RIJVVXbaUUg',
+        // name: 'Gavnø',
+    },
+    {
+        latitude: 55.4038,
+        longitude: 10.4024,
+        title: 'https://www.youtube.com/watch?v=4aOEU_NUer',
+        name: 'Odense',
+    },
+    {
+        latitude: 55.1042,
+        longitude: 10.2287,
+        title: 'https://www.youtube.com/watch?v=4aOEU_NUers',
+        // name: 'Faaborg',
+    },
+    {
+        latitude: 55.7884,
+        longitude: 12.4947,
+        title: 'Lyngby - https://www.youtube.com/watch?v=YbjR_hU1HKM',
+        // name: 'Lyngby',
+    },
+    {
+        latitude: 56.0865,
+        longitude: 12.4008,
+        title: ' https://www.youtube.com/watch?v=rqiOFEhEEDw',
+        // name: 'Rudolph Tegners Museum',
+    },
+    {
+        latitude: 54.9852,
+        longitude: 12.2797,
+        title: 'https://www.youtube.com/watch?v=b5RmMEU9poE',
+        // name: 'Stege and Nyord',
+    },
+    {
+        latitude: 54.7756,
+        longitude: 11.841,
+        title: 'https://www.youtube.com/watch?v=W-3cPeXGe2g',
+        // name: 'Middelercentret Nykøbing Falster',
+    },
+    {
+        latitude: 55.757,
+        longitude: 9.4196,
+        title: 'https://www.youtube.com/watch?v=hmqbUfgoWfw - https://www.youtube.com/watch?v=hU6IG5drWmM',
+        // name: 'Jelling',
+    },
+    {
+        latitude: 56.0508,
+        longitude: 9.945,
+        title: 'https://www.youtube.com/watch?v=yf-exheH4eI',
+        // name: 'Skanderborg',
+    },
+    {
+        latitude: 55.3337,
+        longitude: 10.9739,
+        title: 'https://www.youtube.com/watch?v=hU6IG5drWmM',
+        // name: 'Great Belt Bridge',
+    },
+    {
+        latitude: 55.7268,
+        longitude: 12.5802,
+        title: 'https://www.youtube.com/watch?v=kCwOvm3FM3I',
+        // name: 'Forgotten Giants',
+    },
+    {
+        latitude: 55.6433,
+        longitude: 12.3455,
+        title: 'https://www.youtube.com/watch?v=GrBs3VevuVE',
+        // name: 'Experimentarium',
+    },
+    {
+        latitude: 55.7284,
+        longitude: 9.1124,
+        title: 'https://www.youtube.com/watch?v=hmqbUfgoWfw',
+        // name: 'Bilund',
+    },
+    {
+        latitude: 55.8147,
+        longitude: 10.5886,
+        title: 'https://www.youtube.com/watch?v=I9abDsoC-PQ',
+        // name: 'Samsø',
+    },
+    {
+        latitude: 54.9841,
+        longitude: 12.5437,
+        title: 'https://www.youtube.com/watch?v=OPpz4wJyr_s',
+        // name: 'Møns Klint',
+    },
+    {
+        latitude: 54.9138,
+        longitude: 9.7922,
+        title: 'https://www.youtube.com/watch?v=xLslyAF4tSY',
+        // name: 'Sønderborg',
+    },
+    {
+        latitude: 55.8565,
+        longitude: 11.9746,
+        title: 'https://www.youtube.com/watch?v=BkLc393Wdrk',
+        // name: 'Jægerspris Slot',
+    },
+    {
+        latitude: 54.7275,
+        longitude: 11.4649,
+        title: 'https://www.youtube.com/watch?v=I9abDsoC-PQ',
+        // name: 'Lolland', HERE HERE HERE HERE
+    },
+    {
+        latitude: 55.1612,
+        longitude: 11.154,
+        title: 'https://www.youtube.com/watch?v=dWG8R8_gbRA',
+        // name: 'Omø',
+    },
+    {
+        latitude: 56.4606,
+        longitude: 10.0365,
+        title: 'https://www.youtube.com/watch?v=OqEYLmYbMIs',
+        // name: 'Randers',
+    },
+    {
+        latitude: 57.0488,
+        longitude: 9.9217,
+        title: 'https://www.youtube.com/watch?v=Kq4uX1urfCo',
+        // name: 'Aalborg',
+    },
+    {
+        latitude: 57.725,
+        longitude: 10.5792,
+        title: 'https://www.youtube.com/watch?v=Y7j1Z2Gr4-Q',
+        // name: 'Skagen',
+    },
+    {
+        latitude: 56.6396,
+        longitude: 8.7826,
+        title: 'https://www.youtube.com/watch?v=-FtBx2KWVQA',
+        // name: 'Spøttrup Borg',
+    },
+    {
+        latitude: 56.4569,
+        longitude: 9.1662,
+        title: 'https://www.youtube.com/watch?v=jt-b-_0z6nM',
+        // name: 'Mønsted Kalkgruber',
+    },
+    {
+        latitude: 55.9279,
+        longitude: 12.3008,
+        title: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fo_GstGD9jo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        // name: 'Frederiksborg',
+    },
+]
+polygonTemplate.propertyFields.fill = 'fill'
+// Disabled zoom
+map.seriesContainer.draggable = false
+map.seriesContainer.resizable = false
+map.seriesContainer.events.disableType('doublehit')
+map.chartContainer.background.events.disableType('doublehit')
+// Main cities label
+var label = imageSeriesTemplate.createChild(am4core.Label)
+label.text = '{name}'
+label.fontSize = '2rem'
+label.fontWeight = 'bolder'
+label.horizontalCenter = 'middle'
+label.padding(12, 0, 0, 50)
+// Enabled scroll through
+map.chartContainer.wheelable = false

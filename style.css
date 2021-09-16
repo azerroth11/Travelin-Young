@@ -110,8 +110,11 @@ i {
 }
 
 .selected {
-    text-decoration: underline;
-    color: #74b266;
+    /* color: #74b266; */
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    background-color: #74b266;
+    border-radius: 5px;
 }
 
 /* Navigation */
@@ -225,12 +228,6 @@ nav h2 {
     margin-top: 2rem;
 }
 
-/* Map */
-.map {
-    position: absolute;
-    top: -999999vh;
-}
-
 /* Playlists */
 .playlists {
     display: grid;
@@ -269,7 +266,6 @@ nav h2 {
 /* Travels Playlists Page */
 .map {
     display: grid;
-    place-items: center;
     background-color: hsl(0, 0%, 90%);
     max-width: none;
 }
@@ -282,7 +278,7 @@ nav h2 {
 #mapDK,
 #mapEU,
 #mapCPH {
-    height: 90vh;
+    height: 85vh;
     width: 100%;
 }
 

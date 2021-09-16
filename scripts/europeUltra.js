@@ -15989,3 +15989,57 @@ am4internal_webpackJsonp(
     },
     ['TZwW']
 )
+
+let mapEU = am4core.create('mapEU', am4maps.MapChart)
+mapEU.geodata = am4geodata_europeUltra
+mapEU.projection = new am4maps.projections.Mercator()
+let polygonSeriesEU = new am4maps.MapPolygonSeries()
+polygonSeriesEU.useGeodata = true
+mapEU.series.push(polygonSeriesEU)
+// Populate series data
+let polygonTemplateEU = polygonSeriesEU.mapPolygons.template
+polygonTemplateEU.tooltipText = '{name}'
+polygonTemplateEU.fill = am4core.color('#74B266')
+// Hover state
+let hsEU = polygonTemplateEU.states.create('hover')
+hsEU.properties.fill = am4core.color('#367B25')
+// Tooltip
+let imageSeriesEU = mapEU.series.push(new am4maps.MapImageSeries())
+let imageSeriesTemplateEU = imageSeriesEU.mapImages.template
+let circleEU = imageSeriesTemplateEU.createChild(am4core.Circle)
+circleEU.radius = 0.6
+circleEU.fill = am4core.color('#db7575')
+circleEU.stroke = am4core.color('#FFFFFF')
+circleEU.strokeWidth = 0.1
+circleEU.tooltipHTML = '{title}'
+// Tooltip links
+imageSeriesTemplateEU.propertyFields.latitude = 'latitude'
+imageSeriesTemplateEU.propertyFields.longitude = 'longitude'
+imageSeriesEU.data = [
+    {
+        latitude: 65.0102,
+        longitude: -18.5998,
+        title: 'Iceland - https://www.youtube.com/watch?v=TPB0EEHeNcM - https://www.youtube.com/watch?v=FUadrtVJQ5U',
+    },
+    {
+        latitude: 54.352,
+        longitude: 18.6483,
+        title: 'Gdansk, Poland - https://www.youtube.com/watch?v=7UOkY_5NwM0',
+    },
+    {
+        latitude: 54.0399,
+        longitude: 19.0281,
+        title: 'Malbork Castle, Poland - https://www.youtube.com/watch?v=3b4CZw4nmoc',
+    },
+]
+polygonTemplate.propertyFields.fill = 'fill'
+// Disabled zoom
+mapEU.seriesContainer.draggable = false
+mapEU.seriesContainer.resizable = false
+mapEU.maxZoomLevel = 1
+mapEU.seriesContainer.events.disableType('doublehit')
+mapEU.chartContainer.background.events.disableType('doublehit')
+// Enabled scroll through
+mapEU.chartContainer.wheelable = false
+// Exclude Russia and Svalbard
+polygonSeriesEU.exclude = ['RU', 'SJ']
