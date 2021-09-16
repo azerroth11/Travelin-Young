@@ -32,3 +32,13 @@ europe.addEventListener('click', () => {
     europe.classList.add('selected')
     mapEurope.classList.remove('hidden')
 })
+
+// Map or Playlists
+const mapSection = document.querySelector('.map')
+const playlistsSection = document.querySelector('.playlists')
+
+if (window.innerWidth < 1000) {
+    mapSection.classList.add('hidden')
+} else {
+    playlistsSection.classList.add('hidden')
+}

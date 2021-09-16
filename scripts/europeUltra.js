@@ -16012,24 +16012,27 @@ circleEU.fill = am4core.color('#db7575')
 circleEU.stroke = am4core.color('#FFFFFF')
 circleEU.strokeWidth = 0.1
 circleEU.tooltipHTML = '{title}'
-// Tooltip links
+// Data
 imageSeriesTemplateEU.propertyFields.latitude = 'latitude'
 imageSeriesTemplateEU.propertyFields.longitude = 'longitude'
+var labelEU = imageSeriesTemplateEU.createChild(am4core.Label)
+labelEU.text = '{name}'
+labelEU.fontSize = '0.1rem'
+labelEU.fontWeight = 'bolder'
+labelEU.horizontalCenter = 'middle'
+labelEU.padding(1, 0, 0, 0)
 imageSeriesEU.data = [
     {
         latitude: 65.0102,
         longitude: -18.5998,
-        title: 'Iceland - https://www.youtube.com/watch?v=TPB0EEHeNcM - https://www.youtube.com/watch?v=FUadrtVJQ5U',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FUadrtVJQ5U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        name: 'Iceland',
     },
     {
         latitude: 54.352,
         longitude: 18.6483,
-        title: 'Gdansk, Poland - https://www.youtube.com/watch?v=7UOkY_5NwM0',
-    },
-    {
-        latitude: 54.0399,
-        longitude: 19.0281,
-        title: 'Malbork Castle, Poland - https://www.youtube.com/watch?v=3b4CZw4nmoc',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/7UOkY_5NwM0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        name: 'Poland',
     },
 ]
 polygonTemplate.propertyFields.fill = 'fill'

@@ -10490,39 +10490,51 @@ circleCPH.fill = am4core.color('#db7575')
 circleCPH.stroke = am4core.color('#FFFFFF')
 circleCPH.strokeWidth = 0.1
 circleCPH.tooltipHTML = '{title}'
-// Tooltip links
+// Data
 imageSeriesTemplateCPH.propertyFields.latitude = 'latitude'
 imageSeriesTemplateCPH.propertyFields.longitude = 'longitude'
+var labelCPH = imageSeriesTemplateCPH.createChild(am4core.Label)
+labelCPH.text = '{name}'
+labelCPH.fontSize = '0.1rem'
+labelCPH.fontWeight = 'bolder'
+labelCPH.horizontalCenter = 'middle'
+labelCPH.padding(1, 0, 0, 0)
 imageSeriesCPH.data = [
     {
-        latitude: 55.6773,
-        longitude: 12.601,
-        title: 'FrioendShips - https://www.youtube.com/watch?v=bYPmk8w_vmU',
+        latitude: 55.683,
+        longitude: 12.6,
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/bYPmk8w_vmU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        // name: 'Copenhagen Harbor',
     },
     {
         latitude: 55.6725,
         longitude: 12.5212,
-        title: 'Copenhagen Zoo - https://www.youtube.com/watch?v=Jz8DL9YBcXI',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Jz8DL9YBcXI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        name: 'Copenhagen Zoo',
     },
     {
         latitude: 55.6777,
         longitude: 12.5977,
-        title: 'POPL Burger - https://www.youtube.com/watch?v=sMMuoSyBu8M',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sMMuoSyBu8M?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        // name: 'POPL Burger',
     },
     {
         latitude: 55.6929,
         longitude: 12.5992,
-        title: 'Little Mermaid - https://www.youtube.com/watch?v=7ZdpqoME5SA',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/7ZdpqoME5SA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        name: 'Little Mermaid',
     },
     {
         latitude: 55.6815,
         longitude: 12.5757,
-        title: 'Round Tower - https://www.youtube.com/watch?v=zgseSP8N1s4',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/zgseSP8N1s4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        // name: 'Round Tower',
     },
     {
         latitude: 55.6798,
         longitude: 12.5912,
-        title: 'Nyhavn Area - https://www.youtube.com/watch?v=e9lXRlYXKM0',
+        title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/e9lXRlYXKM0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        name: 'Nyhavn',
     },
 ]
 polygonTemplate.propertyFields.fill = 'fill'
