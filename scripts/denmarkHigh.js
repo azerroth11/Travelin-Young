@@ -4673,8 +4673,8 @@ imageSeries.data = [
         name: 'Aarhus',
     },
     {
-        latitude: 55.6122,
-        longitude: 9.7467,
+        latitude: 55.1763,
+        longitude: 10.4901,
         title: '<iframe width="560" height="315" src="https://www.youtube.com/embed/wrMLRxG2ARE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         // name: 'Egeskov',
     },
@@ -4844,7 +4844,6 @@ imageSeries.data = [
         // name: 'Frederiksborg',
     },
 ]
-polygonTemplate.propertyFields.fill = 'fill'
 // Disabled zoom
 map.seriesContainer.draggable = false
 map.seriesContainer.resizable = false
