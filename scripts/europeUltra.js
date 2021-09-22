@@ -16012,6 +16012,9 @@ circleEU.fill = am4core.color('#db7575')
 circleEU.stroke = am4core.color('#FFFFFF')
 circleEU.strokeWidth = 0.1
 circleEU.tooltipHTML = '{title}'
+// Tooltip stays on hover
+imageSeriesEU.tooltip.label.interactionsEnabled = true
+imageSeriesEU.tooltip.keepTargetHover = true
 // Data
 imageSeriesTemplateEU.propertyFields.latitude = 'latitude'
 imageSeriesTemplateEU.propertyFields.longitude = 'longitude'

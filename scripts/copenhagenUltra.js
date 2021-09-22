@@ -10490,6 +10490,9 @@ circleCPH.fill = am4core.color('#db7575')
 circleCPH.stroke = am4core.color('#FFFFFF')
 circleCPH.strokeWidth = 0.1
 circleCPH.tooltipHTML = '{title}'
+// Tooltip stays on hover
+imageSeriesCPH.tooltip.label.interactionsEnabled = true
+imageSeriesCPH.tooltip.keepTargetHover = true
 // Data
 imageSeriesTemplateCPH.propertyFields.latitude = 'latitude'
 imageSeriesTemplateCPH.propertyFields.longitude = 'longitude'
