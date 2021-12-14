@@ -20,7 +20,8 @@ body {
 /* Commons */
 section {
   width: 100vw;
-  margin-bottom: 2rem;
+  max-width: 1300px;
+  margin: 0 auto 2rem auto;
 }
 
 section h1 {
@@ -137,6 +138,10 @@ header > *:hover {
 }
 
 /* Hero */
+.hero {
+  max-width: none;
+}
+
 .hero video {
   padding: 0;
   height: 50vh;
@@ -186,8 +191,8 @@ header > *:hover {
 /* Press Caroussel */
 .pressCaroussel {
   padding: 1vh 0 5vh 0;
-  margin: 2rem 0;
   background-color: lightgrey;
+  max-width: none;
 }
 
 .swiper .swiper-wrapper div {
