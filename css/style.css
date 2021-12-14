@@ -201,7 +201,7 @@ header > *:hover {
   transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 2;
-  padding: 0 1rem;
+  padding: 0 2.5%;
   color: grey;
   text-align: center;
 }
@@ -300,13 +300,26 @@ body > img {
 .map .swiper2 h1 {
   font-size: 2rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 #mapDK,
 #mapEU,
 #mapCPH {
-  height: 80vh;
+  height: 70vh;
   width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+footer p {
+  padding: 0;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
