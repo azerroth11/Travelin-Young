@@ -188,8 +188,51 @@ header > *:hover {
   font-weight: bold;
 }
 
+/* Press */
+.press {
+  position: relative;
+  margin: 4rem auto;
+}
+
+.press h2 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 2;
+  padding: 0 1rem;
+  color: grey;
+  text-align: center;
+}
+
+.press div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 60%;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+.press div img {
+  max-width: 150px;
+  max-height: 75px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.5);
+}
+
+.press div img:hover {
+  transition: filter 0.25s;
+  filter: grayscale(0) opacity(1);
+}
+
 /* Press Caroussel */
-.pressCaroussel {
+/* .pressCaroussel {
   padding: 1vh 0 5vh 0;
   background-color: lightgrey;
   max-width: none;
@@ -203,12 +246,12 @@ header > *:hover {
   border: 5px solid var(--main);
 }
 
-.swiper-slide img {
+.swiper .swiper-wrapper div img {
   object-fit: cover;
   height: 100%;
 }
 
-.swiper-slide a {
+.swiper .swiper-wrapper div a {
   color: #fff;
   position: absolute;
   top: 50%;
@@ -217,9 +260,9 @@ header > *:hover {
   text-transform: uppercase;
   font-size: 3rem;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
+} */
 
-/* Playlists */
+/* Playlists (S) */
 .playlists {
   display: grid;
   place-items: center;
@@ -237,19 +280,13 @@ header > *:hover {
   display: none;
 }
 
-/* Channel */
-.channel {
-  max-width: 750px;
-  margin-bottom: 0;
+body > img {
+  object-fit: cover;
+  width: 100vw;
+  margin-top: 2rem;
 }
 
-.channel span {
-  color: var(--main);
-  cursor: pointer;
-  font-weight: bolder;
-}
-
-/* Travels Playlists Page */
+/* Map (L) */
 .map {
   overflow-x: hidden;
   display: none;
@@ -329,19 +366,5 @@ header > *:hover {
 
   .playlists {
     display: none;
-  }
-
-  .channel {
-    padding-top: 5vh;
-    max-width: none;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-    place-items: center;
-  }
-
-  .channel-content {
-    max-width: 750px;
-    padding-bottom: 3rem;
   }
 }
