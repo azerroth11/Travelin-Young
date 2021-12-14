@@ -4854,7 +4854,7 @@ var label = imageSeriesTemplate.createChild(am4core.Label)
 label.text = '{name}'
 label.fontSize = '2rem'
 label.fontWeight = 'bolder'
-label.horizontalCenter = 'middle'
-label.padding(12, 0, 0, 50)
+// label.horizontalCenter = 'middle'
+label.padding(-15, -100, 0, 15)
 // Enabled scroll through
 map.chartContainer.wheelable = false
