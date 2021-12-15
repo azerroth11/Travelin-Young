@@ -22,6 +22,7 @@ section {
   width: 100vw;
   max-width: 1300px;
   margin: 0 auto 2rem auto;
+  overflow: hidden;
 }
 
 section h1 {
@@ -192,6 +193,7 @@ header > *:hover {
 .press {
   position: relative;
   margin: 4rem auto;
+  overflow: visible;
 }
 
 .press h2 {
@@ -312,9 +314,10 @@ body > img {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3.5rem;
+  gap: 10%;
 }
 
 footer p {
@@ -370,6 +373,7 @@ footer p {
   /* About L */
   .about {
     padding: 1rem;
+    margin: 5rem auto;
   }
 
   /* Map */
