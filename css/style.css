@@ -233,37 +233,6 @@ header > *:hover {
   filter: grayscale(0) opacity(1);
 }
 
-/* Press Caroussel */
-/* .pressCaroussel {
-  padding: 1vh 0 5vh 0;
-  background-color: lightgrey;
-  max-width: none;
-}
-
-.swiper .swiper-wrapper div {
-  text-align: center;
-  display: grid;
-  place-items: center;
-  max-width: 300px;
-  border: 5px solid var(--main);
-}
-
-.swiper .swiper-wrapper div img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.swiper .swiper-wrapper div a {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 3rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-} */
-
 /* Playlists (S) */
 .playlists {
   display: grid;
@@ -323,6 +292,12 @@ footer {
 footer p {
   padding: 0;
   font-size: 1rem;
+}
+
+/* Travels Page */
+body > h1 {
+  margin-top: 2.5%;
+  font-size: 3.5rem;
 }
 
 @media screen and (min-width: 768px) {
