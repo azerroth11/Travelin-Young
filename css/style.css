@@ -295,9 +295,65 @@ footer p {
 }
 
 /* Travels Page */
-body > h1 {
-  margin-top: 2.5%;
-  font-size: 3.5rem;
+#themePage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 300px;
+  margin: 0 auto 2rem auto;
+  overflow: hidden;
+}
+
+#themePage img {
+  width: 100%;
+}
+
+#themePage h1 {
+  position: absolute;
+  color: #fff;
+  font-size: 5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+#travelsHeader {
+  position: relative;
+  transform: translate(-50%, -115%);
+}
+
+#PageDesc {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+#videosLinks {
+  display: grid;
+  gap: 2rem;
+  max-width: 885px;
+  margin: 3rem auto;
+}
+
+#videosLinks div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* padding: 1rem 0; */
+}
+
+#videosLinks div:nth-child(1),
+#videosLinks div:nth-child(3),
+#videosLinks div:nth-child(5),
+#videosLinks div:nth-child(7) {
+  background: hsla(0, 59%, 66%, 0.1);
+}
+
+#videosLinks div img {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+#videosLinks div p {
+  max-width: 40ch;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
