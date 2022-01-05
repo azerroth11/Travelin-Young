@@ -233,30 +233,6 @@ header > *:hover {
   filter: grayscale(0) opacity(1);
 }
 
-/* Playlists (S) */
-.playlists {
-  display: grid;
-  place-items: center;
-  gap: 2rem;
-}
-
-.playlists img {
-  border-radius: 25px 0 25px 25px;
-  cursor: pointer;
-  max-height: 200px;
-}
-
-.playlists p,
-.playlists a {
-  display: none;
-}
-
-body > img {
-  object-fit: cover;
-  width: 100vw;
-  margin-top: 2rem;
-}
-
 /* Map (L) */
 .map {
   overflow-x: hidden;
@@ -282,16 +258,60 @@ body > img {
 }
 
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   gap: 10%;
 }
 
 footer p {
+  max-width: 75%;
+  text-align: center;
+}
+
+footer p,
+footer a {
   padding: 0;
   font-size: 1rem;
+}
+
+footer div {
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* Playlists (S) */
+.playlists {
+  margin: 5rem auto;
+}
+
+.playlists div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.playlists div div {
+  display: grid;
+  max-width: 35ch;
+}
+
+.playlists img {
+  border-radius: 25px 0 25px 25px;
+  cursor: pointer;
+  max-height: 200px;
+}
+
+.playlists p {
+  display: none;
+  text-align: center;
+}
+
+body > img {
+  object-fit: cover;
+  width: 100vw;
+  margin-top: 2rem;
 }
 
 /* Travels Page */
@@ -318,6 +338,7 @@ footer p {
 #travelsHeader {
   position: relative;
   transform: translate(-50%, -115%);
+  margin-bottom: -2rem;
 }
 
 #PageDesc {
@@ -329,14 +350,13 @@ footer p {
   display: grid;
   gap: 2rem;
   max-width: 885px;
-  margin: 3rem auto;
+  margin: 2rem auto;
 }
 
 #videosLinks div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* padding: 1rem 0; */
 }
 
 #videosLinks div:nth-child(1),
@@ -412,7 +432,7 @@ footer p {
     display: block;
   }
 
-  .playlists {
-    display: none;
+  .playlists p {
+    display: block;
   }
 }
