@@ -16007,11 +16007,12 @@ hsEU.properties.fill = am4core.color('#367B25')
 let imageSeriesEU = mapEU.series.push(new am4maps.MapImageSeries())
 let imageSeriesTemplateEU = imageSeriesEU.mapImages.template
 let circleEU = imageSeriesTemplateEU.createChild(am4core.Circle)
-circleEU.radius = 12
-circleEU.fill = am4core.color('#db7575')
-circleEU.stroke = am4core.color('#FFFFFF')
-circleEU.strokeWidth = 0.1
-circleEU.tooltipHTML = '{title}'
+circleEU.radius = 10
+circleEU.fill = am4core.color('#ffffff')
+circleEU.stroke = am4core.color('#db7575')
+circleEU.strokeWidth = 3
+circleEU.tooltipHTML =
+  '<iframe width="560" height="315" src="{url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 // Tooltip stays on hover
 imageSeriesEU.tooltip.label.interactionsEnabled = true
 imageSeriesEU.tooltip.keepTargetHover = true
@@ -16022,21 +16023,18 @@ var labelEU = imageSeriesTemplateEU.createChild(am4core.Label)
 labelEU.text = '{name}'
 labelEU.fontSize = '2rem'
 labelEU.fontWeight = 'bolder'
-// labelEU.horizontalCenter = 'middle'
 labelEU.padding(-15, -100, 0, 15)
 imageSeriesEU.data = [
   {
     latitude: 65.0102,
     longitude: -18.5998,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/FUadrtVJQ5U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/FUadrtVJQ5U?controls=0',
     name: 'Iceland',
   },
   {
     latitude: 54.352,
     longitude: 18.6483,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/7UOkY_5NwM0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/7UOkY_5NwM0?controls=0',
     name: 'Poland',
   },
 ]

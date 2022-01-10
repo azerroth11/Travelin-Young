@@ -4642,7 +4642,7 @@ map.projection = new am4maps.projections.Mercator()
 let polygonSeries = new am4maps.MapPolygonSeries()
 polygonSeries.useGeodata = true
 map.series.push(polygonSeries)
-// Populate series data
+// Populate maps green data
 let polygonTemplate = polygonSeries.mapPolygons.template
 polygonTemplate.tooltipText = '{name}'
 polygonTemplate.fill = am4core.color('#74B266')
@@ -4654,8 +4654,7 @@ let imageSeries = map.series.push(new am4maps.MapImageSeries())
 let imageSeriesTemplate = imageSeries.mapImages.template
 let circle = imageSeriesTemplate.createChild(am4core.Circle)
 circle.radius = 10
-// circle.fill = am4core.color('#db7575')
-circle.fill = am4core.color('#fff')
+circle.fill = am4core.color('#ffffff')
 circle.stroke = am4core.color('#db7575')
 circle.strokeWidth = 3
 circle.tooltipHTML =
@@ -4846,17 +4845,18 @@ imageSeries.data = [
     // name: 'Frederiksborg',
   },
 ]
+// Main cities label
+let label = imageSeriesTemplate.createChild(am4core.Label)
+label.text = '{name}'
+// label.fontSize = '1.25rem'
+label.fontWeight = 'bolder'
+label.horizontalCenter = 'middle'
+label.verticalCenter = 'top'
+label.padding(5, 0, 0, 0)
+// Enabled scroll through
+map.chartContainer.wheelable = false
 // Disabled zoom
 map.seriesContainer.draggable = false
 map.seriesContainer.resizable = false
 map.seriesContainer.events.disableType('doublehit')
 map.chartContainer.background.events.disableType('doublehit')
-// Main cities label
-var label = imageSeriesTemplate.createChild(am4core.Label)
-label.text = '{name}'
-label.fontSize = '2rem'
-label.fontWeight = 'bolder'
-// label.horizontalCenter = 'middle'
-label.padding(-15, -100, 0, 15)
-// Enabled scroll through
-map.chartContainer.wheelable = false

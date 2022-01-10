@@ -10485,11 +10485,12 @@ hsCPH.properties.fill = am4core.color('#367B25')
 let imageSeriesCPH = mapCPH.series.push(new am4maps.MapImageSeries())
 let imageSeriesTemplateCPH = imageSeriesCPH.mapImages.template
 let circleCPH = imageSeriesTemplateCPH.createChild(am4core.Circle)
-circleCPH.radius = 12
-circleCPH.fill = am4core.color('#db7575')
-circleCPH.stroke = am4core.color('#FFFFFF')
-circleCPH.strokeWidth = 0.1
-circleCPH.tooltipHTML = '{title}'
+circleCPH.radius = 10
+circleCPH.fill = am4core.color('#ffffff')
+circleCPH.stroke = am4core.color('#db7575')
+circleCPH.strokeWidth = 3
+circleCPH.tooltipHTML =
+  '<iframe width="560" height="315" src="{url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 // Tooltip stays on hover
 imageSeriesCPH.tooltip.label.interactionsEnabled = true
 imageSeriesCPH.tooltip.keepTargetHover = true
@@ -10506,43 +10507,37 @@ imageSeriesCPH.data = [
   {
     latitude: 55.683,
     longitude: 12.6,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/bYPmk8w_vmU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/bYPmk8w_vmU?controls=0',
     // name: 'Copenhagen Harbor',
   },
   {
     latitude: 55.6725,
     longitude: 12.5212,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/Jz8DL9YBcXI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/Jz8DL9YBcXI?controls=0',
     name: 'Copenhagen Zoo',
   },
   {
     latitude: 55.6777,
     longitude: 12.5977,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/sMMuoSyBu8M?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/sMMuoSyBu8M?controls=0',
     // name: 'POPL Burger',
   },
   {
     latitude: 55.6929,
     longitude: 12.5992,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/7ZdpqoME5SA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/7ZdpqoME5SA?controls=0',
     name: 'Little Mermaid',
   },
   {
     latitude: 55.6815,
     longitude: 12.5757,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zgseSP8N1s4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/zgseSP8N1s4?controls=0',
     // name: 'Round Tower',
   },
   {
     latitude: 55.6798,
     longitude: 12.5912,
-    title:
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/e9lXRlYXKM0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    url: 'https://www.youtube.com/embed/e9lXRlYXKM0?controls=0',
     name: 'Nyhavn',
   },
 ]
