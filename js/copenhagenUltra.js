@@ -10499,7 +10499,7 @@ imageSeriesTemplateCPH.propertyFields.latitude = 'latitude'
 imageSeriesTemplateCPH.propertyFields.longitude = 'longitude'
 var labelCPH = imageSeriesTemplateCPH.createChild(am4core.Label)
 labelCPH.text = '{name}'
-labelCPH.fontSize = '2rem'
+labelCPH.fontSize = '1.5rem'
 labelCPH.fontWeight = 'bolder'
 // labelCPH.horizontalCenter = 'middle'
 labelCPH.padding(-15, -100, 0, 15)

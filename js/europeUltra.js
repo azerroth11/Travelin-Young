@@ -16021,7 +16021,7 @@ imageSeriesTemplateEU.propertyFields.latitude = 'latitude'
 imageSeriesTemplateEU.propertyFields.longitude = 'longitude'
 var labelEU = imageSeriesTemplateEU.createChild(am4core.Label)
 labelEU.text = '{name}'
-labelEU.fontSize = '2rem'
+labelEU.fontSize = '1.5rem'
 labelEU.fontWeight = 'bolder'
 labelEU.padding(-15, -100, 0, 15)
 imageSeriesEU.data = [

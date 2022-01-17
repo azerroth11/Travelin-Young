@@ -4642,7 +4642,7 @@ map.projection = new am4maps.projections.Mercator()
 let polygonSeries = new am4maps.MapPolygonSeries()
 polygonSeries.useGeodata = true
 map.series.push(polygonSeries)
-// Populate maps green data
+// Populate series data
 let polygonTemplate = polygonSeries.mapPolygons.template
 polygonTemplate.tooltipText = '{name}'
 polygonTemplate.fill = am4core.color('#74B266')
@@ -4654,7 +4654,8 @@ let imageSeries = map.series.push(new am4maps.MapImageSeries())
 let imageSeriesTemplate = imageSeries.mapImages.template
 let circle = imageSeriesTemplate.createChild(am4core.Circle)
 circle.radius = 10
-circle.fill = am4core.color('#ffffff')
+// circle.fill = am4core.color('#db7575')
+circle.fill = am4core.color('#fff')
 circle.stroke = am4core.color('#db7575')
 circle.strokeWidth = 3
 circle.tooltipHTML =
@@ -4844,19 +4845,45 @@ imageSeries.data = [
     url: 'https://www.youtube-nocookie.com/embed/fo_GstGD9jo?controls=0"',
     // name: 'Frederiksborg',
   },
+  {
+    latitude: 55.4487,
+    longitude: 8.4109,
+    url: 'https://www.youtube.com/watch?v=jtPpAd1GUog?controls=0"',
+    // name: 'Fanø',
+  },
+  {
+    latitude: 55.3324,
+    longitude: 8.7811,
+    url: 'https://www.youtube.com/watch?v=gMZfdWUt0Ec?controls=0"',
+    // name: 'Ribe',
+  },   
+  {
+    latitude: 56.0450,
+    longitude: 12.3780,
+    url: 'https://www.youtube.com/watch?v=yC4hoCXkwcY?controls=0"',
+    // name: 'Ensrum Kloster',
+  },   
+  {
+    latitude: 55.0592,
+    longitude: 10.6296,
+    url: 'https://www.youtube.com/watch?v=0lFsyzx_jPU?controls=0"',
+    // name: 'Svendborg',
+  },      
+    
+    
+    
 ]
-// Main cities label
-let label = imageSeriesTemplate.createChild(am4core.Label)
-label.text = '{name}'
-// label.fontSize = '1.25rem'
-label.fontWeight = 'bolder'
-label.horizontalCenter = 'middle'
-label.verticalCenter = 'top'
-label.padding(5, 0, 0, 0)
-// Enabled scroll through
-map.chartContainer.wheelable = false
 // Disabled zoom
 map.seriesContainer.draggable = false
 map.seriesContainer.resizable = false
 map.seriesContainer.events.disableType('doublehit')
 map.chartContainer.background.events.disableType('doublehit')
+// Main cities label
+var label = imageSeriesTemplate.createChild(am4core.Label)
+label.text = '{name}'
+label.fontSize = '1.5rem'
+label.fontWeight = 'bolder'
+// label.horizontalCenter = 'middle'
+label.padding(-15, -100, 0, 15)
+// Enabled scroll through
+map.chartContainer.wheelable = false
