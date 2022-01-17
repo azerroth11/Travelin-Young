@@ -4653,8 +4653,9 @@ hs.properties.fill = am4core.color('#367B25')
 let imageSeries = map.series.push(new am4maps.MapImageSeries())
 let imageSeriesTemplate = imageSeries.mapImages.template
 let circle = imageSeriesTemplate.createChild(am4core.Circle)
+circle.showTooltipOn = 'hit'
+circle.cursorOverStyle = am4core.MouseCursorStyle.pointer
 circle.radius = 10
-// circle.fill = am4core.color('#db7575')
 circle.fill = am4core.color('#fff')
 circle.stroke = am4core.color('#db7575')
 circle.strokeWidth = 3
@@ -4662,7 +4663,7 @@ circle.tooltipHTML =
   '<iframe width="560" height="315" src="{url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 // Tooltip stays on hover
 imageSeries.tooltip.label.interactionsEnabled = true
-imageSeries.tooltip.keepTargetHover = true
+imageSeries.tooltip.keepTargetHover = false
 // Data
 imageSeriesTemplate.propertyFields.latitude = 'latitude'
 imageSeriesTemplate.propertyFields.longitude = 'longitude'
@@ -4677,92 +4678,92 @@ imageSeries.data = [
   {
     latitude: 55.1763,
     longitude: 10.4901,
-    url: 'https://www.youtube.com/embed/wrMLRxG2ARE?controls=0"',
+    url: 'https://www.youtube.com/embed/wrMLRxG2ARE?controls=0',
     // name: 'Egeskov',
   },
   {
     latitude: 55.496,
     longitude: 9.4731,
-    url: 'https://www.youtube.com/embed/WjruTDMnnr8?controls=0"',
+    url: 'https://www.youtube.com/embed/WjruTDMnnr8?controls=0',
     // name: 'Kolding',
   },
   {
     latitude: 54.8589,
     longitude: 10.3875,
-    url: 'https://www.youtube.com/embed/LUB01WCl2z4?controls=0"',
+    url: 'https://www.youtube.com/embed/LUB01WCl2z4?controls=0',
     // name: 'Ærø',
   },
   {
     latitude: 56.0308,
     longitude: 12.5921,
-    url: 'https://www.youtube.com/embed/BCHgdOwpOzU?controls=0"',
+    url: 'https://www.youtube.com/embed/BCHgdOwpOzU?controls=0',
     // name: 'Helsingør',
   },
   {
     latitude: 55.1868,
     longitude: 11.7098,
-    url: 'https://www.youtube.com/embed/RIJVVXbaUUg?controls=0"',
+    url: 'https://www.youtube.com/embed/RIJVVXbaUUg?controls=0',
     // name: 'Gavnø',
   },
   {
     latitude: 55.4038,
     longitude: 10.4024,
-    url: 'https://www.youtube.com/embed/4aOEU_NUers?controls=0"',
+    url: 'https://www.youtube.com/embed/4aOEU_NUers?controls=0',
     name: 'Odense',
     // Odense and Faaborg have the same video
   },
   {
     latitude: 55.1042,
     longitude: 10.2287,
-    url: 'https://www.youtube.com/embed/4aOEU_NUers?controls=0"',
+    url: 'https://www.youtube.com/embed/4aOEU_NUers?controls=0',
     // name: 'Faaborg',
   },
   {
     latitude: 55.7884,
     longitude: 12.4947,
-    url: 'https://www.youtube.com/embed/YbjR_hU1HKM?controls=0"',
+    url: 'https://www.youtube.com/embed/YbjR_hU1HKM?controls=0',
     // name: 'Lyngby',
   },
   {
     latitude: 56.0865,
     longitude: 12.4008,
-    url: 'https://www.youtube.com/embed/rqiOFEhEEDw?controls=0"',
+    url: 'https://www.youtube.com/embed/rqiOFEhEEDw?controls=0',
     // name: 'Rudolph Tegners Museum',
   },
   {
     latitude: 54.9852,
     longitude: 12.2797,
-    url: 'https://www.youtube.com/embed/b5RmMEU9poE?controls=0"',
+    url: 'https://www.youtube.com/embed/b5RmMEU9poE?controls=0',
     // name: 'Stege and Nyord',
   },
   {
     latitude: 54.7756,
     longitude: 11.841,
-    url: 'https://www.youtube.com/embed/W-3cPeXGe2g?controls=0"',
+    url: 'https://www.youtube.com/embed/W-3cPeXGe2g?controls=0',
     // name: 'Middelercentret Nykøbing Falster',
   },
   {
     latitude: 55.757,
     longitude: 9.4196,
-    url: 'https://www.youtube.com/embed/hmqbUfgoWfw?controls=0"',
+    url: 'https://www.youtube.com/embed/hmqbUfgoWfw?controls=0',
     // name: 'Jelling',
   },
   {
     latitude: 56.0508,
     longitude: 9.945,
-    url: 'https://www.youtube.com/embed/yf-exheH4eI?controls=0"',
+    url: 'https://www.youtube.com/embed/yf-exheH4eI?controls=0',
     // name: 'Skanderborg',
   },
   {
     latitude: 55.3337,
     longitude: 10.9739,
-    url: 'https://www.youtube.com/embed/hU6IG5drWmM?controls=0"',
+    url: 'https://www.youtube.com/embed/hU6IG5drWmM?controls=0',
     // name: 'Great Belt Bridge',
   },
   {
     latitude: 55.6761,
     longitude: 12.5683,
-    url: 'https://www.youtube.com/embed/kCwOvm3FM3I?controls=0"',
+    url: 'https://www.youtube.com/embed/kCwOvm3FM3I?controls=0',
     // name: 'Forgotten Giants',
     name: 'Copenhagen',
     // Merged Giants & CPH location for visibility
@@ -4770,43 +4771,43 @@ imageSeries.data = [
   {
     latitude: 55.6433,
     longitude: 12.3455,
-    url: 'https://www.youtube.com/embed/GrBs3VevuVE?controls=0"',
+    url: 'https://www.youtube.com/embed/GrBs3VevuVE?controls=0',
     // name: 'Experimentarium',
   },
   {
     latitude: 55.7284,
     longitude: 9.1124,
-    url: 'https://www.youtube.com/embed/51hJuG-ZmRo?controls=0"',
+    url: 'https://www.youtube.com/embed/51hJuG-ZmRo?controls=0',
     // name: 'Bilund',
   },
   {
     latitude: 55.8147,
     longitude: 10.5886,
-    url: 'https://www.youtube.com/embed/I9abDsoC-PQ?controls=0"',
+    url: 'https://www.youtube.com/embed/I9abDsoC-PQ?controls=0',
     // name: 'Samsø',
   },
   {
     latitude: 54.9841,
     longitude: 12.5437,
-    url: 'https://www.youtube.com/embed/OPpz4wJyr_s?controls=0"',
+    url: 'https://www.youtube.com/embed/OPpz4wJyr_s?controls=0',
     // name: 'Møns Klint',
   },
   {
     latitude: 54.9138,
     longitude: 9.7922,
-    url: 'https://www.youtube.com/embed/xLslyAF4tSY?controls=0"',
+    url: 'https://www.youtube.com/embed/xLslyAF4tSY?controls=0',
     // name: 'Sønderborg',
   },
   {
     latitude: 55.8565,
     longitude: 11.9746,
-    url: 'https://www.youtube.com/embed/BkLc393Wdrk?controls=0"',
+    url: 'https://www.youtube.com/embed/BkLc393Wdrk?controls=0',
     // name: 'Jægerspris Slot',
   },
   {
     latitude: 55.1612,
     longitude: 11.154,
-    url: 'https://www.youtube.com/embed/dWG8R8_gbRA?controls=0"',
+    url: 'https://www.youtube.com/embed/dWG8R8_gbRA?controls=0',
     // name: 'Omø',
   },
   {
@@ -4818,7 +4819,7 @@ imageSeries.data = [
   {
     latitude: 57.0488,
     longitude: 9.9217,
-    url: 'https://www.youtube.com/embed/Kq4uX1urfCo?controls=0"',
+    url: 'https://www.youtube.com/embed/Kq4uX1urfCo?controls=0',
     // name: 'Aalborg',
   },
   {
@@ -4830,48 +4831,45 @@ imageSeries.data = [
   {
     latitude: 56.6396,
     longitude: 8.7826,
-    url: 'https://www.youtube.com/embed/-FtBx2KWVQA?controls=0"',
+    url: 'https://www.youtube.com/embed/-FtBx2KWVQA?controls=0',
     // name: 'Spøttrup Borg',
   },
   {
     latitude: 56.4569,
     longitude: 9.1662,
-    url: 'https://www.youtube.com/embed/jt-b-_0z6nM?controls=0"',
+    url: 'https://www.youtube.com/embed/jt-b-_0z6nM?controls=0',
     // name: 'Mønsted Kalkgruber',
   },
   {
     latitude: 55.9279,
     longitude: 12.3008,
-    url: 'https://www.youtube-nocookie.com/embed/fo_GstGD9jo?controls=0"',
+    url: 'https://www.youtube.com/embed/fo_GstGD9jo?controls=0',
     // name: 'Frederiksborg',
   },
   {
     latitude: 55.4487,
     longitude: 8.4109,
-    url: 'https://www.youtube.com/watch?v=jtPpAd1GUog?controls=0"',
+    url: 'https://www.youtube.com/watch?v=jtPpAd1GUog?controls=0',
     // name: 'Fanø',
   },
   {
     latitude: 55.3324,
     longitude: 8.7811,
-    url: 'https://www.youtube.com/watch?v=gMZfdWUt0Ec?controls=0"',
+    url: 'https://www.youtube.com/watch?v=gMZfdWUt0Ec?controls=0',
     // name: 'Ribe',
-  },   
+  },
   {
-    latitude: 56.0450,
-    longitude: 12.3780,
-    url: 'https://www.youtube.com/watch?v=yC4hoCXkwcY?controls=0"',
-    // name: 'Ensrum Kloster',
-  },   
+    latitude: 56.045,
+    longitude: 12.378,
+    url: 'https://www.youtube.com/watch?v=yC4hoCXkwcY?controls=0',
+    // name: 'Esrum Kloster',
+  },
   {
     latitude: 55.0592,
     longitude: 10.6296,
-    url: 'https://www.youtube.com/watch?v=0lFsyzx_jPU?controls=0"',
+    url: 'https://www.youtube.com/watch?v=0lFsyzx_jPU?controls=0',
     // name: 'Svendborg',
-  },      
-    
-    
-    
+  },
 ]
 // Disabled zoom
 map.seriesContainer.draggable = false
@@ -4883,7 +4881,6 @@ var label = imageSeriesTemplate.createChild(am4core.Label)
 label.text = '{name}'
 label.fontSize = '1.5rem'
 label.fontWeight = 'bolder'
-// label.horizontalCenter = 'middle'
 label.padding(-15, -100, 0, 15)
 // Enabled scroll through
 map.chartContainer.wheelable = false
