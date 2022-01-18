@@ -15,6 +15,7 @@ body {
   font-family: 'Ovo', serif;
   font-size: 18px;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Commons */
@@ -319,19 +320,9 @@ body > img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-height: 300px;
+  max-height: 250px;
   margin: 0 auto 2rem auto;
   overflow: hidden;
-}
-
-.bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 537px;
-  height: 750px;
-  z-index: -1;
-  object-fit: contain;
 }
 
 #themePage img {
@@ -357,16 +348,12 @@ body > img {
 }
 
 #videosLinks {
-  display: grid;
-  gap: 2rem;
-  max-width: 885px;
-  margin: 2rem auto;
-}
-
-#videosLinks div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  max-width: min(1050px, 90%);
+  margin: 2rem auto;
 }
 
 #videosLinks div:nth-child(1),
@@ -444,5 +431,12 @@ body > img {
 
   .playlists p {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #movingToDenmarkBody {
+    background: url('../img/travelsThumbnails/background/mirandaHand.webp') no-repeat bottom right;
+    background-size: min(30vw, 50vh);
   }
 }

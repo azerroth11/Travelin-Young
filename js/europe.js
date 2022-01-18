@@ -16035,7 +16035,7 @@ imageSeriesEU.data = [
     latitude: 54.352,
     longitude: 18.6483,
     url: 'https://www.youtube.com/embed/7UOkY_5NwM0?controls=0',
-    name: 'Poland',
+    // name: 'Poland',
   },
   {
     latitude: 53.161,
@@ -16047,7 +16047,7 @@ imageSeriesEU.data = [
     latitude: 52.4266,
     longitude: 13.003,
     url: 'https://www.youtube.com/embed/ppEFNwi1pf0?controls=0',
-    name: 'Outside Berlin',
+    name: 'Germany',
   },
   {
     latitude: 54.6871,

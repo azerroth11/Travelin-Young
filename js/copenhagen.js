@@ -10538,7 +10538,7 @@ imageSeriesCPH.data = [
     latitude: 55.6798,
     longitude: 12.5912,
     url: 'https://www.youtube.com/embed/e9lXRlYXKM0?controls=0',
-    name: 'Nyhavn',
+    // name: 'Nyhavn',
   },
   {
     latitude: 55.675,
