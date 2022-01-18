@@ -10552,12 +10552,6 @@ imageSeriesCPH.data = [
     url: 'https://www.youtube.com/embed/QBhdJ8qHhKY?controls=0',
     name: 'Rosenborg Slot',
   },
-  {
-    latitude: 55.6382,
-    longitude: 12.6563,
-    url: 'https://www.youtube.com/embed/6Mc5qjY8dB8?controls=0',
-    name: 'Den Blå Planet',
-  },
 ]
 polygonTemplate.propertyFields.fill = 'fill'
 // Disabled zoom

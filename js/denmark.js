@@ -4870,6 +4870,12 @@ imageSeries.data = [
     url: 'https://www.youtube.com/embed/0lFsyzx_jPU?controls=0"',
     // name: 'Svendborg',
   },
+  {
+    latitude: 55.6382,
+    longitude: 12.6563,
+    url: 'https://www.youtube.com/embed/6Mc5qjY8dB8?controls=0',
+    // name: 'Den Blå Planet',
+  },
 ]
 // Disabled zoom
 map.seriesContainer.draggable = false
