@@ -324,6 +324,16 @@ body > img {
   overflow: hidden;
 }
 
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 537px;
+  height: 750px;
+  z-index: -1;
+  object-fit: contain;
+}
+
 #themePage img {
   width: 100%;
 }

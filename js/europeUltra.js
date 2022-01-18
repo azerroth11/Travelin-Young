@@ -16037,6 +16037,30 @@ imageSeriesEU.data = [
     url: 'https://www.youtube.com/embed/7UOkY_5NwM0?controls=0',
     name: 'Poland',
   },
+  {
+    latitude: 53.161,
+    longitude: -8.012,
+    url: 'https://www.youtube.com/embed/7aB3j1WE9HY?controls=0',
+    name: 'Ireland',
+  },
+  {
+    latitude: 52.4266,
+    longitude: 13.003,
+    url: 'https://www.youtube.com/embed/ppEFNwi1pf0?controls=0',
+    name: 'Outside Berlin',
+  },
+  {
+    latitude: 54.6871,
+    longitude: 25.2667,
+    url: 'https://www.youtube.com/embed/veCLidicJO4?controls=0',
+    name: 'Lithuania',
+  },
+  {
+    latitude: 59.4772,
+    longitude: 24.8055,
+    url: 'https://www.youtube.com/embed/FRlJvyD7mfM?controls=0',
+    name: 'Estonia',
+  },
 ]
 polygonTemplate.propertyFields.fill = 'fill'
 // Disabled zoom
